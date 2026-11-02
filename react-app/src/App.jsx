@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
-function Crow({ size = 240 }) {
+function BlackSwan({ size = 240 }) {
   return (
     <svg
       width={size}
       height={size}
       viewBox="0 0 240 240"
       role="img"
-      aria-label="나뭇가지에 앉은 까마귀"
+      aria-label="물 위에 떠 있는 흑고니"
       fill="none"
       stroke="#111"
       strokeWidth="3"
@@ -19,51 +19,51 @@ function Crow({ size = 240 }) {
     >
       <rect width="240" height="240" rx="24" fill="#fff" stroke="none" />
 
-      {/* 나뭇가지 */}
-      <path d="M24 196 C 90 189, 160 194, 222 186" />
-      <path d="M176 192 C 186 184, 194 178, 206 172" />
-      <path d="M198 176 C 204 168, 214 166, 220 170 C 214 176, 206 178, 198 176 Z" />
-
-      {/* 다리 */}
-      <path d="M114 166 L 110 192" />
-      <path d="M130 164 L 130 191" />
-      <path d="M100 196 L 110 192 L 118 197" />
-      <path d="M121 195 L 130 191 L 138 195" />
+      {/* 물결 */}
+      <path d="M30 184 C 50 179, 70 189, 90 184 S 130 179, 150 184 S 190 189, 212 183" />
+      <path d="M58 200 C 74 196, 90 204, 106 200 S 138 196, 154 200" />
+      <path d="M128 214 C 140 211, 152 217, 164 214" />
 
       {/* 몸통 */}
       <path
-        fill="#fff"
-        d="M42 80
-           L 72 70
-           C 80 54, 104 50, 116 62
-           C 128 74, 132 88, 140 100
-           C 158 112, 184 128, 214 160
-           L 205 170
-           C 186 161, 170 155, 156 152
-           C 146 166, 128 172, 110 168
-           C 90 162, 78 140, 78 116
-           C 78 104, 76 95, 70 87
+        fill="#111"
+        d="M72 154
+           C 72 134, 100 124, 130 127
+           C 160 130, 188 120, 212 98
+           C 210 132, 196 164, 158 176
+           L 98 176
+           C 82 174, 72 166, 72 154
+           Z"
+      />
+
+      {/* 목과 머리 */}
+      <path
+        fill="#111"
+        d="M104 134
+           C 84 112, 86 88, 92 68
+           C 95 57, 85 50, 76 52
+           C 68 54, 64 60, 63 66
+           L 65 80
+           C 61 100, 64 124, 82 146
            Z"
       />
 
       {/* 부리 */}
-      <path d="M44 80 L 74 79" />
+      <path fill="#fff" d="M63 66 L 42 76 L 65 80 Z" />
+      <path d="M50 74 L 56 74" />
 
       {/* 눈 */}
-      <circle cx="93" cy="70" r="5" />
-      <circle cx="94" cy="70" r="1.6" fill="#111" stroke="none" />
+      <circle cx="78" cy="61" r="2.4" fill="#fff" stroke="none" />
 
-      {/* 목 깃털 */}
-      <path d="M82 96 l -5 7" />
-      <path d="M88 102 l -4 8" />
-
-      {/* 날개 */}
-      <path d="M100 112 C 120 98, 160 108, 194 148" />
-      <path d="M108 128 C 128 120, 152 128, 176 146" />
-      <path d="M118 144 C 134 140, 150 144, 162 152" />
-
-      {/* 꼬리 깃 */}
-      <path d="M180 140 L 196 162" />
+      {/* 날개 깃 (흰 선) */}
+      <g stroke="#fff" strokeWidth="2.5">
+        <path d="M112 146 C 140 138, 172 130, 198 110" />
+        <path d="M120 158 C 146 152, 172 146, 192 128" />
+        <path d="M130 168 C 150 165, 168 160, 182 148" />
+        <path d="M150 132 c 4 -8, 12 -8, 14 -2" />
+        <path d="M170 126 c 4 -8, 12 -8, 14 -2" />
+        <path d="M188 116 c 3 -7, 10 -7, 12 -2" />
+      </g>
     </svg>
   )
 }
@@ -74,7 +74,7 @@ function App() {
   return (
     <>
       <section id="center">
-        <Crow />
+        <BlackSwan />
         <div>
           <h1>Get started</h1>
           <p>
