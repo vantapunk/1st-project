@@ -1,8 +1,72 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+
+function Crow({ size = 240 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 240 240"
+      role="img"
+      aria-label="나뭇가지에 앉은 까마귀"
+      fill="none"
+      stroke="#111"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="240" height="240" rx="24" fill="#fff" stroke="none" />
+
+      {/* 나뭇가지 */}
+      <path d="M24 196 C 90 189, 160 194, 222 186" />
+      <path d="M176 192 C 186 184, 194 178, 206 172" />
+      <path d="M198 176 C 204 168, 214 166, 220 170 C 214 176, 206 178, 198 176 Z" />
+
+      {/* 다리 */}
+      <path d="M114 166 L 110 192" />
+      <path d="M130 164 L 130 191" />
+      <path d="M100 196 L 110 192 L 118 197" />
+      <path d="M121 195 L 130 191 L 138 195" />
+
+      {/* 몸통 */}
+      <path
+        fill="#fff"
+        d="M42 80
+           L 72 70
+           C 80 54, 104 50, 116 62
+           C 128 74, 132 88, 140 100
+           C 158 112, 184 128, 214 160
+           L 205 170
+           C 186 161, 170 155, 156 152
+           C 146 166, 128 172, 110 168
+           C 90 162, 78 140, 78 116
+           C 78 104, 76 95, 70 87
+           Z"
+      />
+
+      {/* 부리 */}
+      <path d="M44 80 L 74 79" />
+
+      {/* 눈 */}
+      <circle cx="93" cy="70" r="5" />
+      <circle cx="94" cy="70" r="1.6" fill="#111" stroke="none" />
+
+      {/* 목 깃털 */}
+      <path d="M82 96 l -5 7" />
+      <path d="M88 102 l -4 8" />
+
+      {/* 날개 */}
+      <path d="M100 112 C 120 98, 160 108, 194 148" />
+      <path d="M108 128 C 128 120, 152 128, 176 146" />
+      <path d="M118 144 C 134 140, 150 144, 162 152" />
+
+      {/* 꼬리 깃 */}
+      <path d="M180 140 L 196 162" />
+    </svg>
+  )
+}
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,11 +74,7 @@ function App() {
   return (
     <>
       <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+        <Crow />
         <div>
           <h1>Get started</h1>
           <p>
